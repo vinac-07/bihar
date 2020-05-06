@@ -1,0 +1,27 @@
+{
+  "name": "bihar",
+  "version": "1.0.0",
+  "description": "bihar COVID-19",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinac-07/bihar.git"
+  },
+  "keywords": [
+    "Bihar",
+    "covid",
+    "relife"
+  ],
+  "author": "Vinayak Majati",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vinac-07/bihar/issues"
+  },
+  "homepage": "https://github.com/vinac-07/bihar#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
