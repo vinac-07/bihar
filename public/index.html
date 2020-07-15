@@ -63,10 +63,10 @@
 
 
 
-<div class="container-fluid padding" id="guidlines">
+<div class="container-fluid padding">
 	<div class="row welcome text-center">
 		<div class="col-12">
-			<h1 class="display-4">COVID-19 GUIDLINES</h1>
+			<h1 class="display-4" id="guidlines">COVID-19 GUIDLINES</h1>
 			<hr>
 			<p class="lead">The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, sneezes, or exhales. These droplets are too heavy to hang in the air, and quickly fall on floors or surfaces.</p>
 		</div>
@@ -100,10 +100,10 @@
 	<div class="row padding">
 		<div class="col-md-12 col-lg-6">
 			<h2>Stay updated...</h2>
-			<h4>20 new coronavirus cases reported in Bihar as of 8:00 AM - Apr 29</h4>
-			<p>BIHAR : 20 new coronavirus cases were reported as of 8:00 AM on Apr 29 in Bihar, according to data released by the Ministry of Health and Family Welfare. This brings the total reported cases of coronavirus in Bihar to 366. Among the total people infected as on date, 64 have recovered and 2 have passed away.</p>
+			<h4 id="title"></h4>
+			<p id="content"></p>
 			<br>
-			<a href="#" class="btn btn-primar">Learn more</a>
+			<a href="https://news.google.com/topstories?hl=en-IN&gl=IN&ceid=IN:en" class="btn btn-primar" target="_blank" >Learn more</a>
 			<blockquote class="twitter-tweet" data-theme="light"><p lang="hi" dir="ltr"><a href="https://twitter.com/hashtag/%E0%A4%95%E0%A5%8B%E0%A4%B0%E0%A5%8B%E0%A4%A8%E0%A4%BE_%E0%A4%B5%E0%A4%BE%E0%A4%AF%E0%A4%B0%E0%A4%B8?src=hash&amp;ref_src=twsrc%5Etfw">#कोरोना_वायरस</a> पर कुछ महत्वपूर्ण प्रश्नों का जवाब दे रहे हैं <a href="https://twitter.com/hashtag/%E0%A4%A1%E0%A5%89%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%AE%E0%A4%A8%E0%A5%8B%E0%A4%B9%E0%A4%B0%E0%A4%B2%E0%A5%8B%E0%A4%B9%E0%A4%BF%E0%A4%AF%E0%A4%BE%E0%A4%85%E0%A4%B8%E0%A5%8D%E0%A4%AA%E0%A4%A4%E0%A4%BE%E0%A4%B2?src=hash&amp;ref_src=twsrc%5Etfw">#डॉराममनोहरलोहियाअस्पताल</a> <a href="https://twitter.com/hashtag/%E0%A4%A6%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B2%E0%A5%80?src=hash&amp;ref_src=twsrc%5Etfw">#दिल्ली</a> के स्वास्थ्य विशेषज्ञ डॉ ए के वार्ष्णेय। <a href="https://t.co/U5glviPDqr">pic.twitter.com/U5glviPDqr</a></p>&mdash; PIB In Bihar #stayhome#staysafe (@PIB_Patna) <a href="https://twitter.com/PIB_Patna/status/1257497308310061056?ref_src=twsrc%5Etfw">May 5, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 		</div>
 		<div class="col-lg-6">
@@ -188,6 +188,26 @@
 
 	</div>
 </div>
+<script>
+	const url = 'http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=cd0ccdbf7a7d4cd388257f365b54b4df';
+	async function news(){
+		const response = await fetch(url);
+		const data = await response.json();
+		console.log(data);
+
+		const title = data.articles[6].title;
+		document.getElementById('title').innerHTML=title;
+
+		const content =data.articles[6].content;
+		document.getElementById('content').innerHTML=content;
+
+		//const url = data.articles[6].url;
+		//document.getElementById('n').onclick=url;
+
+	}
+	news();
+
+</script>
 
 
 

@@ -1,4 +1,5 @@
 const express = require('express');
 const app = express();
-app.listen(3000,()=> {console.log('at 3000')});
+const port= process.env.PORT ;
+app.listen(port,()=> {console.log('at ${port}');});
 app.use(express.static('public'));
